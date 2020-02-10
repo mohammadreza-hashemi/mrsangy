@@ -17,7 +17,7 @@ class AdminController extends Controller
 
         $file = $file->move(public_path($imagePath) , $filename);
 
-        $sizes = ["300" , "600" , "900"];
+        $sizes = ["300" , "600" , "900"];  
         $url['images'] = $this->resize($file->getRealPath() , $sizes , $imagePath , $filename);
         $url['thumb'] = $url['images'][$sizes[0]];
 
